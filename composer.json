@@ -1,0 +1,56 @@
+{
+    "name": "http-message-strategies-interop/guzzle-get",
+    "description": "GuzzleGet Example of HTTP Message Strategies PSR",
+    "keywords": [
+        "psr",
+        "psr-7",
+        "http",
+        "http-message",
+        "request",
+        "response",
+        "strategies",
+        "get",
+        "fetch"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael Mayer",
+            "email": "michael@schnittstabil.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Interop\\Http\\Message\\Strategies\\GuzzleGet\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Interop\\Http\\Message\\Strategies\\GuzzleGet\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^6.0",
+        "http-message-strategies-interop/http-message-strategies": "^0.1"
+    },
+    "require-dev": {
+        "schnittstabil/phpunit-starter": "^6.0"
+    },
+    "scripts": {
+        "clean": "rm -rf build/ src/* .php_cs.cache",
+        "lint": [
+            "sugared-rim-cs"
+        ],
+        "test": [
+            "@travis",
+            "@lint"
+        ],
+        "travis": [
+            "tests/usage.php",
+            "schnittstabil-phpunit-starter"
+        ]
+    }
+}
