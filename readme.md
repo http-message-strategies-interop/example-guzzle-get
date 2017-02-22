@@ -1,15 +1,15 @@
-# GuzzleGet Example of HTTP Message Strategies PSR (pre-Draft) [![Build Status](https://travis-ci.org/http-message-strategies-interop/guzzle-get.svg?branch=master)](https://travis-ci.org/http-message-strategies-interop/guzzle-get) [![Coverage Status](https://coveralls.io/repos/github/http-message-strategies-interop/guzzle-get/badge.svg?branch=master)](https://coveralls.io/github/http-message-strategies-interop/guzzle-get?branch=master)
+# GuzzleGet Example of HTTP Message Strategies PSR (pre-Draft) [![Build Status](https://travis-ci.org/http-message-strategies-interop/example-guzzle-get.svg?branch=master)](https://travis-ci.org/http-message-strategies-interop/example-guzzle-get) [![Coverage Status](https://coveralls.io/repos/github/http-message-strategies-interop/example-guzzle-get/badge.svg?branch=master)](https://coveralls.io/github/http-message-strategies-interop/example-guzzle-get?branch=master)
 
 ## Install
 
 ```
-$ composer require http-message-strategies-interop/guzzle-get
+$ composer require http-message-strategies-interop/example-guzzle-get
 ```
 
 ## Usage
 
 ```php
-use Interop\Http\Message\Strategies\GuzzleGet\GuzzleGet;
+use Interop\Http\Message\Strategies\Examples\GuzzleGet\GuzzleGet;
 use GuzzleHttp\Psr7\Request;
 
 $gget = new GuzzleGet();

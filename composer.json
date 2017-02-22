@@ -1,5 +1,5 @@
 {
-    "name": "http-message-strategies-interop/guzzle-get",
+    "name": "http-message-strategies-interop/example-guzzle-get",
     "description": "GuzzleGet Example of HTTP Message Strategies PSR",
     "keywords": [
         "psr",
@@ -21,12 +21,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Interop\\Http\\Message\\Strategies\\GuzzleGet\\": "src"
+            "Interop\\Http\\Message\\Strategies\\Examples\\GuzzleGet\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Interop\\Http\\Message\\Strategies\\GuzzleGet\\": "tests"
+            "Interop\\Http\\Message\\Strategies\\Examples\\GuzzleGet\\": "tests"
         }
     },
     "config": {

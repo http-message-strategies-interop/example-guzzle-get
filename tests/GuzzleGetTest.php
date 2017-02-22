@@ -1,6 +1,6 @@
 <?php
 
-namespace Interop\Http\Message\Strategies\GuzzleGet;
+namespace Interop\Http\Message\Strategies\Examples\GuzzleGet;
 
 use GuzzleHttp\Exception\ConnectException;
 use GuzzleHttp\Handler\MockHandler;

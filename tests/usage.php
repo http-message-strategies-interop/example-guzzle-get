@@ -3,7 +3,7 @@
 
 require_once __DIR__.'/../vendor/autoload.php';
 
-use Interop\Http\Message\Strategies\GuzzleGet\GuzzleGet;
+use Interop\Http\Message\Strategies\Examples\GuzzleGet\GuzzleGet;
 use GuzzleHttp\Psr7\Request;
 
 $gget = new GuzzleGet();
