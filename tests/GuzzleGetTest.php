@@ -7,7 +7,7 @@ use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\HandlerStack;
-use Interop\Http\Message\Strategies\RequestResponseInterface;
+use Interop\Http\Message\Strategies\RequestHandlerInterface;
 use Psr\Http\Message\ResponseInterface;
 
 /**
@@ -20,9 +20,9 @@ class GuzzleGetTest extends \PHPUnit\Framework\TestCase
         return new Request('GET', 'http://httpbin.org');
     }
 
-    public function testGuzzleGetShouldImplementsRequestResponseInterface()
+    public function testGuzzleGetShouldImplementsRequestHandlerInterface()
     {
-        $this->assertInstanceOf(RequestResponseInterface::class, new GuzzleGet());
+        $this->assertInstanceOf(RequestHandlerInterface::class, new GuzzleGet());
     }
 
     public function testGuzzleGetShouldGet()

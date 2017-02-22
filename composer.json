@@ -34,7 +34,7 @@
     },
     "require": {
         "guzzlehttp/guzzle": "^6.0",
-        "http-message-strategies-interop/http-message-strategies": "^0.1"
+        "http-message-strategies-interop/http-message-strategies": "^0.2"
     },
     "require-dev": {
         "schnittstabil/phpunit-starter": "^6.0"

@@ -2,12 +2,12 @@
 
 namespace Interop\Http\Message\Strategies\Examples\GuzzleGet;
 
-use Interop\Http\Message\Strategies\RequestResponseInterface;
+use Interop\Http\Message\Strategies\RequestHandlerInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use GuzzleHttp\Exception\RequestException;
 
-class GuzzleGet implements RequestResponseInterface
+class GuzzleGet implements RequestHandlerInterface
 {
     /** @var array Default request options */
     private $config;
