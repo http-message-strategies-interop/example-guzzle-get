@@ -9,17 +9,13 @@ use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\HandlerStack;
 use Interop\Http\Message\Strategies\RequestHandlerInterface;
 use Psr\Http\Message\ResponseInterface;
+use Zend\Diactoros\ServerRequest;
 
 /**
  * @SuppressWarnings(PHPMD.StaticAccess)
  */
 class GuzzleGetTest extends \PHPUnit\Framework\TestCase
 {
-    public function requestFactory()
-    {
-        return new Request('GET', 'http://httpbin.org');
-    }
-
     public function testGuzzleGetShouldImplementsRequestHandlerInterface()
     {
         $this->assertInstanceOf(RequestHandlerInterface::class, new GuzzleGet());
@@ -27,11 +23,16 @@ class GuzzleGetTest extends \PHPUnit\Framework\TestCase
 
     public function testGuzzleGetShouldGet()
     {
-        $mock = new MockHandler([new Response()]);
-        $handler = HandlerStack::create($mock);
-        $gget = new GuzzleGet(['handler' => $handler]);
+        $gget = new GuzzleGet();
+        $response = $gget(new Request('GET', 'http://httpbin.org'));
+        $this->assertInstanceOf(ResponseInterface::class, $response);
+        $this->assertEquals(200, $response->getStatusCode());
+    }
 
-        $response = $gget(new Request('GET', 'http://example.com'));
+    public function testGuzzleGetShouldGetServerRequest()
+    {
+        $gget = new GuzzleGet();
+        $response = $gget(new ServerRequest([], [], 'http://httpbin.org', 'GET'));
         $this->assertInstanceOf(ResponseInterface::class, $response);
         $this->assertEquals(200, $response->getStatusCode());
     }
