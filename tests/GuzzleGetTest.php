@@ -7,7 +7,7 @@ use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\HandlerStack;
-use Interop\Http\Message\Strategies\RequestHandlerInterface;
+use Interop\Http\Message\Strategies\ActionInterface;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\ServerRequest;
 
@@ -16,9 +16,9 @@ use Zend\Diactoros\ServerRequest;
  */
 class GuzzleGetTest extends \PHPUnit\Framework\TestCase
 {
-    public function testGuzzleGetShouldImplementsRequestHandlerInterface()
+    public function testGuzzleGetShouldImplementsActionInterface()
     {
-        $this->assertInstanceOf(RequestHandlerInterface::class, new GuzzleGet());
+        $this->assertInstanceOf(ActionInterface::class, new GuzzleGet());
     }
 
     public function testGuzzleGetShouldGet()
