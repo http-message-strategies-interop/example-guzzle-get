@@ -1,5 +1,7 @@
 # GuzzleGet Example of HTTP Message Strategies PSR (pre-Draft) [![Build Status](https://travis-ci.org/http-message-strategies-interop/example-guzzle-get.svg?branch=master)](https://travis-ci.org/http-message-strategies-interop/example-guzzle-get) [![Coverage Status](https://coveralls.io/repos/github/http-message-strategies-interop/example-guzzle-get/badge.svg?branch=master)](https://coveralls.io/github/http-message-strategies-interop/example-guzzle-get?branch=master) [![Code Climate](https://codeclimate.com/github/http-message-strategies-interop/example-guzzle-get/badges/gpa.svg)](https://codeclimate.com/github/http-message-strategies-interop/example-guzzle-get)
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/c6d3ef78-a2d4-4d70-bc13-1e29674944c2/big.png)](https://insight.sensiolabs.com/projects/c6d3ef78-a2d4-4d70-bc13-1e29674944c2)
+
 ## Install
 
 ```
