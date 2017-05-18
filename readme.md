@@ -1,4 +1,4 @@
-# GuzzleGet Example of HTTP Message Strategies PSR (pre-Draft) [![Build Status](https://travis-ci.org/http-message-strategies-interop/example-guzzle-get.svg?branch=master)](https://travis-ci.org/http-message-strategies-interop/example-guzzle-get) [![Coverage Status](https://coveralls.io/repos/github/http-message-strategies-interop/example-guzzle-get/badge.svg?branch=master)](https://coveralls.io/github/http-message-strategies-interop/example-guzzle-get?branch=master)
+# GuzzleGet Example of HTTP Message Strategies PSR (pre-Draft) [![Build Status](https://travis-ci.org/http-message-strategies-interop/example-guzzle-get.svg?branch=master)](https://travis-ci.org/http-message-strategies-interop/example-guzzle-get) [![Coverage Status](https://coveralls.io/repos/github/http-message-strategies-interop/example-guzzle-get/badge.svg?branch=master)](https://coveralls.io/github/http-message-strategies-interop/example-guzzle-get?branch=master) [![Code Climate](https://codeclimate.com/github/http-message-strategies-interop/example-guzzle-get/badges/gpa.svg)](https://codeclimate.com/github/http-message-strategies-interop/example-guzzle-get)
 
 ## Install
 

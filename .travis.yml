@@ -8,7 +8,7 @@ sudo: false
 install:
   - composer selfupdate
   - composer install
-  - composer require codeclimate/php-test-reporter satooshi/php-coveralls
+  - composer require --dev codeclimate/php-test-reporter:dev-master satooshi/php-coveralls
 
 before_script:
   - sed --in-place 's/private $handles;/private $handles = [];/' vendor/guzzlehttp/guzzle/src/Handler/CurlFactory.php
@@ -19,3 +19,7 @@ script:
 after_success:
   - vendor/bin/test-reporter
   - vendor/bin/coveralls -v
+
+env:
+  matrix:
+    secure: lvrIjCoqV5rqKvQiR4Iu5YiVBvxlccrssGrWCQKiizzYAbQRwZQYvL7BWvwbIu4Bx1EvkuWfiEcM8UZlKoBrrIvBxkE5a0geCPj682myq2T1VKuScO4PgkSSYg6oMsk/NbT0UKlqMdzVO1Cm32hvePmdlRxPjbULllI46wpu5RX64XIFVkd+xIWO9P34QairWIj4r3wGSrfbEsiMNfk4UXtwmmVCvgSTFf7FrzcxfMW9PuQeRhdcpkSvtYgEPq109NLyrewhsQU18cO7I0nrdFQINj+Oaq+mTDSw0ai2w3faq3CfSlt+TcZCrhExoWKXiSR7ypvDHczdA1PpysJrUZwcgWItOGlhtzPtqR2FTQn3dKKI8NimcbeNe5dIZ1rLZxLY9IPFgjK0Lae4XvZuvc5EEDP+f7d8ZX9C4ozdwhHeDKXRkx1QIIv5hAPeZP9Ubezqon0rnjTZv70vhMoi8RXxt7bKyiET+MIl2NwVEuG0z+rbgfabocJNO4TQiHTjgvYUsDwgNSMx7B9iTrq0/VW1OHHAZnZDvbhNvJoRQzle/nn7gLbtWEkdq/c0FGDYMMIevfHIYZgxo+j3mXa3ZXvUH0H4wD1KjqKNiSnGGiya9TqkUbg+br0QwA1nJaSmaxlaIonxtalj6OHmP7rcrPp4qZ0yOT40WKOxXshcE4E=
