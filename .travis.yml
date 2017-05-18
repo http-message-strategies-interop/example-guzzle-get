@@ -10,6 +10,9 @@ install:
   - composer install
   - composer require codeclimate/php-test-reporter satooshi/php-coveralls
 
+before_script:
+  - sed --in-place 's/private $handles;/private $handles = [];/' vendor/guzzlehttp/guzzle/src/Handler/CurlFactory.php
+
 script:
   - composer travis
 
