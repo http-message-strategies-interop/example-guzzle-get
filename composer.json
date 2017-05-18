@@ -33,8 +33,9 @@
         "sort-packages": true
     },
     "require": {
+        "php": ">=7.2.0",
         "guzzlehttp/guzzle": "^6.0",
-        "http-message-strategies-interop/http-message-strategies": "^0.3"
+        "http-message-strategies-interop/http-message-strategies": "^0.4"
     },
     "require-dev": {
         "schnittstabil/phpunit-starter": "^6.0",

@@ -2,12 +2,12 @@
 
 namespace Interop\Http\Message\Strategies\Examples\GuzzleGet;
 
-use Interop\Http\Message\Strategies\ActionInterface;
+use Interop\Http\Message\Strategies\ServerActionInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use GuzzleHttp\Exception\RequestException;
 
-class GuzzleGet implements ActionInterface
+class GuzzleGet implements ServerActionInterface
 {
     /** @var array Default request options */
     private $config;
@@ -21,6 +21,7 @@ class GuzzleGet implements ActionInterface
     {
         $this->config = $config;
     }
+
     /**
      * Send a request and return the response.
      *
@@ -28,7 +29,7 @@ class GuzzleGet implements ActionInterface
      *
      * @return ResponseInterface
      */
-    public function __invoke(RequestInterface $request)
+    protected function send(RequestInterface $request)
     {
         try {
             return (new \GuzzleHttp\Client($this->config))->send($request);
@@ -39,5 +40,17 @@ class GuzzleGet implements ActionInterface
 
             throw $e;
         }
+    }
+
+    /**
+     * Send a request and return the response.
+     *
+     * @param RequestInterface $request
+     *
+     * @return ResponseInterface
+     */
+    public function __invoke($request)
+    {
+        return $this->send($request);
     }
 }
